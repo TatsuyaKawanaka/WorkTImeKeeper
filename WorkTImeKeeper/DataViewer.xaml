@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WorkTImeKeeper.DataViewer">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="60*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="プロジェクト名"
+                           Grid.Column="0" Grid.Row="0"/>
+                    <Entry x:Name="PjName" Text="PJ Name"
+                           Grid.Column="0" Grid.Row="1"/>
+                    <Label Text="COM"
+                           Grid.Column="1" Grid.Row="0"/>
+                    <Label Text="User"
+                           Grid.Column="1" Grid.Row="1"/>
+                </Grid>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="YearSelector"/>
+                <Picker x:Name="MonthSelector"/>
+            </StackLayout>
+            <StackLayout>
+                <Grid x:Name="DataGrid" BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                    
+                    </Grid.RowDefinitions>
+                </Grid>
+            </StackLayout>
+            <StackLayout>
+                <Button x:Name="StampBtn" Text="登録" Clicked="StampBtn_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
