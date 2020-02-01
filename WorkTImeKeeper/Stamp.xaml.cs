@@ -26,17 +26,19 @@ namespace WorkTImeKeeper
 
         private void DataViewBtn_Clicked(object sender, EventArgs e)
         {
+            // 一覧画面への遷移
             Application.Current.MainPage = new DataViewer();
         }
 
         private void StartTimeBtn_Clicked(object sender, EventArgs e)
         {
+            //TODO 開始時間の登録
 
         }
 
         private void EndTimeBtn_Clicked(object sender, EventArgs e)
         {
-
+            //TODO 終了時間の登録
         }
     }
 }
