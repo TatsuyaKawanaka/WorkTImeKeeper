@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkTImeKeeper.Android", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkTImeKeeper.iOS", "WorkTImeKeeper.iOS\WorkTImeKeeper.iOS.csproj", "{373E65B2-1D4E-4A45-B07E-42090BC31A59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkTImeKeeper", "WorkTImeKeeper\WorkTImeKeeper.csproj", "{1FAF22C4-758C-4FD1-BAA4-814FF186A18F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkTImeKeeper", "WorkTImeKeeper\WorkTImeKeeper.csproj", "{1FAF22C4-758C-4FD1-BAA4-814FF186A18F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{D020B0ED-8E15-418D-95F3-EF278073608C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

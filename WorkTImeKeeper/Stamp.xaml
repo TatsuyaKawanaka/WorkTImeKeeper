@@ -24,10 +24,10 @@
                     <RowDefinition Height="50*"/>
                     <RowDefinition Height="50*"/>
                 </Grid.RowDefinitions>
-                
-                <Label Text="ユーザ名"
+
+                <Label x:Name="UserCom" Text="所属"
                        Grid.Column="0" Grid.Row="0"/>
-                <Label Text="所属"
+                <Label x:Name="UserName" Text="ユーザ名"
                        Grid.Column="0" Grid.Row="1"/>
                 <Label Text="日付"
                        Grid.Column="1" Grid.Row="1"/>

@@ -9,8 +9,19 @@ namespace WorkTImeKeeper
         public App()
         {
             InitializeComponent();
-
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             MainPage = new SignIn();
+        }
+
+        private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+//#if __IOS__
+//            // iOS用のコード
+//#elif __ANDROID__
+//            // Android用のコード
+//#else
+//            // UWP用のコード
+
         }
 
         protected override void OnStart()
@@ -24,5 +35,7 @@ namespace WorkTImeKeeper
         protected override void OnResume()
         {
         }
+
+
     }
 }

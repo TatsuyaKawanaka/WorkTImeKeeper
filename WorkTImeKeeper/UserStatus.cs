@@ -7,7 +7,17 @@ namespace WorkTImeKeeper
 {
     public static class UserStatus
     {
+        private static string company = "";
         private static string userName = "";
+
+        public static string Company
+        {
+            get
+            {
+                return company;
+            }
+        }
+
         public static string UserName
         {
             get
@@ -18,6 +28,12 @@ namespace WorkTImeKeeper
             {
                 userName = value;
             }
+        }
+
+        public static void SetUserInfo(string user, string com)
+        {
+            company = com;
+            userName = user;
         }
     }
 }

@@ -15,6 +15,8 @@ namespace WorkTImeKeeper
         public Stamp()
         {
             InitializeComponent();
+            UserCom.Text = UserStatus.Company;
+            UserName.Text = UserStatus.UserName;
         }
 
         private void SignOutBtn_Clicked(object sender, EventArgs e)

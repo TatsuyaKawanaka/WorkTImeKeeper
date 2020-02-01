@@ -21,8 +21,16 @@ namespace WorkTImeKeeper
         private void EnterBtn_Clicked(object sender, EventArgs e)
         {
             //TODO validatecheck
-
-            Application.Current.MainPage = new Stamp();
+            if (DatabaseManager.GetAccount(Id.Text, Password.Text))
+            {
+                Application.Current.MainPage = new Stamp();
+            }
+            else
+            {
+                ErrMsg.Text = Constants.Err_UserUnmatch;
+                ErrMsg.IsVisible = true;
+                Password.Focus();
+            }
         }
 
         private void Id_Completed(object sender, EventArgs e)
