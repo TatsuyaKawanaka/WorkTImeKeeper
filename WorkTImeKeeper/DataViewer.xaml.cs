@@ -101,7 +101,19 @@ namespace WorkTImeKeeper
                 Columns[i].SetValue(Grid.RowProperty, 0);
             }
 
-
+            for (var col = 0; col < Columns.Count; col++)
+            {
+                Label label;
+                var d = DateTime.DaysInMonth(int.Parse(YearSelector.SelectedItem.ToString()), int.Parse(MonthSelector.SelectedItem.ToString()));
+                for (var row = 0; row < d; row++)
+                {
+                    DataGrid.RowDefinitions.Add(new RowDefinition());
+                    label = new Label() { Text = (row + 1).ToString(), BackgroundColor = Color.WhiteSmoke, TextColor = Color.Black };
+                    label.SetValue(Grid.ColumnProperty, col);
+                    label.SetValue(Grid.RowProperty, row + 1);
+                    DataGrid.Children.Add(label);
+                }
+            }
         }
 
         private List<Label> Columns = new List<Label>()
@@ -120,18 +132,6 @@ namespace WorkTImeKeeper
 
         private void UpdateGrid(int year, int month)
         {
-            for (var col = 0; col < Columns.Count; col++)
-            {
-                Label label;
-                for (var row = 0; row < DateTime.DaysInMonth(year, month); row++)
-                {
-                    DataGrid.RowDefinitions.Add(new RowDefinition());
-                    label = new Label() { Text = (row + 1).ToString(), BackgroundColor = Color.WhiteSmoke, TextColor = Color.Black };
-                    label.SetValue(Grid.ColumnProperty, col);
-                    label.SetValue(Grid.RowProperty, row + 1);
-                    DataGrid.Children.Add(label);
-                }
-            }
 
         }
 

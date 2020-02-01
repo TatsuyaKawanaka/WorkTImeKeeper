@@ -6,8 +6,13 @@
              mc:Ignorable="d"
              x:Class="WorkTImeKeeper.DataViewer">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20%"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="70*"/>
@@ -27,11 +32,14 @@
                            Grid.Column="1" Grid.Row="1"/>
                 </Grid>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
                 <Picker x:Name="YearSelector"/>
                 <Picker x:Name="MonthSelector"/>
             </StackLayout>
-            <StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                <Button x:Name="StampBtn" Text="登録" Clicked="StampBtn_Clicked"/>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="0">
                 <Grid x:Name="DataGrid" BackgroundColor="Black">
                     <Grid.ColumnDefinitions>
                     </Grid.ColumnDefinitions>
@@ -40,9 +48,6 @@
                     </Grid.RowDefinitions>
                 </Grid>
             </StackLayout>
-            <StackLayout>
-                <Button x:Name="StampBtn" Text="登録" Clicked="StampBtn_Clicked"/>
-            </StackLayout>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
