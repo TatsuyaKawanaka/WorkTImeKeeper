@@ -88,6 +88,7 @@ namespace WorkTImeKeeper
         private void InitGridBase()
         {
             DataGrid.RowDefinitions.Add(new RowDefinition());
+            DataGrid.ColumnDefinitions.Clear();
             for (var i = 0; i < Columns.Count; i++)
             {
                 DataGrid.Children.Add(Columns[i]);
